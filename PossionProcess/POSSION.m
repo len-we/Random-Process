@@ -1,16 +1,19 @@
-lamda=2;Tmax=80;
+%lamda=2;
+Tmax=80;
+max_times = 80;
 
-i=1;T(1)=random('exponential',lamda);
+i=1;T(1)=exprnd(1/lambda(0));
 
-while(T(i)<Tmax)
+while(i<max_times)
 
-   T(i+1)=T(i)+random('exponential',lamda);
+   T(i+1)=T(i)+exprnd(1/lambda(T(i)));
 
    i=i+1;
 
 end
 
-T(i)=Tmax;x=0:1:i;w(1)=0;
+% T(i)=Tmax;
+x=0:1:max_times;w(1)=0;
 
 for p=1:i
 
