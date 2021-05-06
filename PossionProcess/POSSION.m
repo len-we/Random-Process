@@ -17,7 +17,5 @@ for p=1:i
 end
 
 %length(w)
-
 %length(x)
-
 stairs(w,x);
